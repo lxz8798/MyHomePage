@@ -1,0 +1,45 @@
+$Width:100%;
+
+div#MyHeaderNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: $Width; 
+
+  z-index:99;
+
+  background: -webkit-linear-gradient(hsla(0,10,1,.1) 1%, hsla(0,10,10,0));
+  background: -o-linear-gradient(hsla(0,10,1,.1) 1%, hsla(0,10,10,0));
+  background: linear-gradient(hsla(0,10,1,.1) 1%, hsla(0,10,10,0));
+  transition:all 1s ease-out;  
+
+  span.ShowNav {
+    width:100vw;
+    height:5vh;
+    font-size: 1.5em;
+    display:inline-flex;
+    justify-content:center;
+    align-self:center;
+    cursor:pointer;
+  }
+}
+.NavHidden {
+  transform: translateY(-68%);
+}
+
+.el-carousel__item h3 {
+    color: #475669;
+    font-size: 14px;
+    opacity: 0.75;
+    line-height: 110px;
+    margin: 0;
+  }
+
+.el-carousel__item:nth-child(2n) {
+   background-color: hsla(178,80,20,1);
+}
+
+.el-carousel__item:nth-child(2n+1) {
+   background-color: hsla(178,80,20,1);
+}

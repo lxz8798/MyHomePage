@@ -1,0 +1,50 @@
+$FontSize:12px;
+$FB:bold;
+$FF:"Microsoft YaHei","Arial","黑体";
+$WBox:100vw;
+$HBox:100vh;
+$Page:2;
+$CompBoxSpace:12vw;
+$BoxPT:15vh;
+/*Color-HSLA*/
+
+$Gray:#cecece;
+$Hue:#aefd12;
+html,
+body {
+  width: $WBox;
+  height:$HBox;
+  min-height:$HBox;
+  overflow-x:hidden;
+}
+
+div#app {
+	width: $WBox;
+	height: $HBox;
+	min-height:$HBox;
+  // display: flex;
+  // flex-direction: column; // flex-wrap:no-wrap;换行
+  // align-items: center; // justify-content: space-between;
+  // justify-content: center; // align-items: center;垂直居中
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: $FontSize;
+  font-family: $FF;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none; // color:hsla($HColor,$SColor,$LColor,$AColor);
+  color: $Hue;
+}
+
+a:hover {
+  color: darken($Hue, 10%);
+}

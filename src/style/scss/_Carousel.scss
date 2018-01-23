@@ -1,0 +1,67 @@
+$WBox:100vw;
+$HBox:100vh;
+div#Carousel{
+	width:$WBox;
+	height:$HBox;
+	position: relative;
+	
+	div.HomeCount {
+	  font-size:1.2em;
+	  position:absolute;
+	  bottom:3vh;
+	  right:3vw;
+	  z-index:99;
+	  width:20vw;
+	  height:20vh;
+	  color:hsla(260,0,0,.9);
+	  display:inline-flex;
+	 	align-items:center;
+	  .CountH3 {
+	  	font-weight: bold;
+	  	font-size: 5em;
+	  }
+	  span {
+	  	font-weight: bold;
+	  	font-size:1.5em;
+	  	
+	  }
+	  span:nth-child(1) {
+	  	flex:1;
+			
+	  }
+	  span:nth-child(2) {flex:4; }
+	}
+}
+
+.el-carousel {
+	width:$WBox;
+	height:$HBox;
+	min-height:$HBox;
+}
+.el-carousel__container {
+	height:$HBox;
+	min-height:$HBox;
+}
+.el-carousel__item {
+	width:$WBox;
+	height:$HBox;
+}
+.el-carousel__item img {
+	width:$WBox;
+	height:$HBox;
+}
+.el-carousel__item h3 {
+	color: #475669;
+	font-size: 18px;
+	opacity: 0.75;
+	line-height: 300px;
+	margin: 0;
+}
+
+.el-carousel__item:nth-child(2n) {
+	
+}
+
+.el-carousel__item:nth-child(2n+1) {
+	
+}

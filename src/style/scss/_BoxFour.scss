@@ -1,0 +1,25 @@
+$PIRWidth:85vw;
+$PIRHeight:80vh;
+$PIRPaddingVW:1vw;
+$PIRPaddingVH:1vh;
+$PIRPro:0.4;
+div#BoxFour {
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	
+	flex:1;
+
+	width:100vw;
+	height:100vh;
+	 .l,.r{    
+	    // display:inline-flex;
+	  }
+	  .l {
+	    order:2;
+	  }
+	  .r {
+	    order:1;
+	  }
+	
+}

@@ -1,0 +1,32 @@
+div#SvgIco {
+	width:100vw;
+	height:100vh;
+	overflow: hidden;
+	@include FC(flex,column,center,center);
+	> div#SvgIco > svg {
+		width:100vw;
+		height:100vh;
+		flex:1;
+	}
+	> div.buttonBox {
+			width:100vw;
+			height:10vh;
+			margin-bottom:2vh;
+			margin-right: 3vw;
+			@include FC(flex,column,center,center);
+		> .backB {
+			width:100px;
+			background:none;
+			border:1px solid hsla(220,50%,80%,.3);
+			line-height: 10px;
+			transition: all 0.3s ease-in;
+			color:white;
+		}
+		> .backB:hover {
+			background: white;
+			border:1px solid hsla(220,50%,100%,1);
+			color: hsla(220,80%,50%,1);
+			transition: all 0.5s ease-out;
+		}
+	}
+}

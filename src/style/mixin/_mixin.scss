@@ -1,0 +1,21 @@
+
+
+@mixin FC ($flex,$derection,$alignX,$alignY){
+	@if $flex == flex {
+		display:$flex;
+		flex-direction:$derection;
+		align-items:$alignX;
+		justify-content:$alignY;		
+	}
+	@if $derection == row {
+		flex-direction:$derection;
+		align-items:$alignX;
+		justify-content:$alignY;		
+	}
+	@else if $derection == column {
+		flex-direction:$derection;
+		align-items:$alignX;
+		justify-content:$alignY;		
+	}
+	
+}

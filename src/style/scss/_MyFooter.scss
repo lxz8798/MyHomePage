@@ -1,0 +1,62 @@
+$FooterUL:90vw;
+@import '../base/Base.scss';
+div#MyFooter {
+	width:$WBox;
+	height:$HBox;
+	display: flex;
+  	justify-content: center;
+	// border-top:1px solid hsla(0,10,10,.3);
+	.FooterContent {
+		width:88vw;
+		height:60vh;
+		padding-top: 28vh;
+		display:inline-flex;
+		justify-content: center;
+  	
+
+		ul { 
+			height:56vh;
+			padding:1vh 1vw 1vh 1vw;
+			margin:0;
+			width:$FooterUL / 4;
+			transition:all .3s ease-out;
+			
+			li {
+				
+				line-height:2em;
+			}
+			li.iconBox {
+				svg {
+				   width: 1em; height: 1em;
+				   vertical-align: -0.15em;
+				   margin-right: 1vw;
+				   font-size: 3em;
+				   fill: currentColor;
+				   overflow: hidden;
+				}
+
+				.qq-icon:hover {
+					transition:all .5s ease-out;
+					color:hsla(203,50,50,1);
+				}
+				.wx-icon:hover {
+					transition:all .5s ease-out;
+					color:hsla(120,50,50,1);
+				}
+				.mail-icon:hover {
+					transition:all .5s ease-out;
+					color:hsla(240,50,50,1);
+				}
+			}
+			
+		}
+		ul:hover {
+			background:hsla(0,0,0,.03);
+		}
+		ul:nth-child(1){ flex:1; }
+		ul:nth-child(2){ flex:1; }
+		ul:nth-child(3){ flex:1; }
+		ul:nth-child(4){ flex:1; }
+		ul:nth-child(5){ flex:5; }
+	}
+}
