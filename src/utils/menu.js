@@ -39,10 +39,10 @@ module.exports = [
 				name:'SCSS/CSS3',
 				componentName:'scss'
 			},
-			{
-				name:'SVG',
-				componentName:'svg'
-			},
+			// {
+			// 	name:'SVG',
+			// 	componentName:'svg'
+			// },
 			{
 				name:'JS',
 				componentName:'js'

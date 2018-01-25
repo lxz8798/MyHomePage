@@ -3,12 +3,11 @@
 		<header-nav></header-nav>
 
 			<div class="NodeJSCompBox">
-				<div class="Bread">
-					<el-breadcrumb separator="/">
-					  <el-breadcrumb-item :to="{ path: '/' }"><slot name="Bread_1">首页</slot></el-breadcrumb-item>
-					  <el-breadcrumb-item><slot name="Bread_2">NodeJS</slot></el-breadcrumb-item>
-					</el-breadcrumb>
-				</div>
+				<bread-crumb>
+					<template scoped="props">
+						<span slot="Bread_2">NodeJS</span>
+					</template>
+				</bread-crumb>
 
 				<div class="AuthorInfo">
 					<span><i class="el-icon-edit"></i>作者：站长</span>
@@ -34,9 +33,9 @@
 import HeaderNav from '../components/MyHeaderNav.vue';
 import MyFooter from '../components/MyFooter.vue';
 import ContentComp from '../components/ContentComp.vue';
-
+import BreadCrumb from '../components/BreadCrumb.vue';
 export default {
-	components:{HeaderNav,MyFooter,ContentComp},
+	components:{HeaderNav,MyFooter,ContentComp,BreadCrumb},
 	data () {
 		return {
 			NodeJSTag:[

@@ -93,12 +93,7 @@ export default new Router({
       component: JSComp,
       
     },
-    {
-      path: '/svg',
-      name: 'svgcomp',
-      component: SvgComp,
-      
-    },
+    
     {
       path: '/animecss3',
       name: 'animecss3',
@@ -114,7 +109,8 @@ export default new Router({
     {
       path: '/animesvg',
       name: 'animesvg',
-      component: SVGComp,
+      component: SvgComp,
+      
     },
     {
       path: '/animejs',
