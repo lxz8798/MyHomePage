@@ -40,7 +40,7 @@ module.exports = [
 				componentName:'scss'
 			},
 			// {
-			// 	name:'SVG',
+			// 	name:'git',
 			// 	componentName:'svg'
 			// },
 			{

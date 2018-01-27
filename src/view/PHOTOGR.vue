@@ -4,7 +4,7 @@
 		<div class="PhotoCompBox">
 			<bread-crumb>
 				<template scoped="props">
-					<span slot="Bread_2">PhotoGR</span>
+					<span slot="Bread_2">PhotoGr</span>
 				</template>
 			</bread-crumb>
 			<!-- <div class="Bread">

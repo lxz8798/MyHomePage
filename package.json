@@ -11,6 +11,7 @@
     "webpack": "webpack --config webpack.config.js --progress --colors --display-reasons"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "babel-polyfill": "^6.26.0",
     "element-ui": "^2.0.8",
     "jquery": "^3.2.1",

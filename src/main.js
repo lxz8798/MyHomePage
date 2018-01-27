@@ -1,6 +1,5 @@
 import Vue from 'vue';
-// import axios from 'axios';
-// import VueAxios from 'vue-axios';
+import axios from 'axios';
 import router from './router/index.js';
 import $ from 'jquery';
 import store from './vuex/store.js';
@@ -13,7 +12,8 @@ import HomePage from './components/MyHomePage.vue';
 
 Vue.config.productionTip = false
 
-// Vue.prototype.$http = axios;
+Vue.prototype.$http = axios;
+axios.defaults.baseURL = '/api'
 
 new Vue({
   el: '#app',

@@ -91,7 +91,6 @@
     span.dialogImg
       img(:src="currentImg")
     span.dialog-footer(slot="footer")
-      el-button(@click="centerDialogVisible = false") 取消
       el-button(type="primary" @click="centerDialogVisible = false") 确定
 
   a.img-box(

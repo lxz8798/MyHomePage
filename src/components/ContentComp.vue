@@ -1,73 +1,36 @@
 <template>
-	<div id="ContentComp">
-
-		<div class="ContentInfo" v-for="item in ContentUl">
-			<slot name="ContentH1"><h1>暂时没有h1内容</h1></slot>
-			<slot name="ContentH2"><h2>暂时没有h2内容</h2></slot>
-			<slot name="ContentH3"><h3 class="ContentH3">暂时没有信息内容</h3></slot>
-			<!-- <slot name="ContentH3"><p>暂时没有信息内容</p></slot> -->
-
-			<span v-for="sub in item.info">
-				<slot name="infoI"><p>{{sub.infoI}}</p></slot>
-				
-				<strong class="mail-icon">
-					<slot name="TitleIcon"><i class="iconfont" slot="TitleIcon">&#xe67b;</i></slot>
-					<slot name="'InfoII"><p>{{sub.infoII}}</p></slot>
-				</strong>
-
-				<slot name="infoIII"><p>{{sub.infoIII}}</p></slot>
-				
-				<strong class="mail-icon" v-if="sub.infoFlag">
-					<slot name="TitleIcon"><i class="iconfont" slot="TitleIcon">&#xe67b;</i></slot>
-					<slot name="'infoIV"><p>{{sub.infoIV}}</p></slot>
-				</strong>
-
-				<slot name="infoV"><p>{{sub.infoV}}</p></slot>
-				
-				<strong class="mail-icon" v-if="sub.infoFlag">
-					<slot name="TitleIcon"><i class="iconfont" slot="TitleIcon">&#xe67b;</i></slot>
-					<slot name="'infoVI"><p>{{sub.infoVI}}</p></slot>
-				</strong>
-
-				<slot name="infoVII"><p>{{sub.infoVII}}</p></slot>
-				
-				<strong class="mail-icon" v-if="sub.infoFlag">
-					<slot name="TitleIcon"><i class="iconfont" slot="TitleIcon">&#xe67b;</i></slot>
-					<slot name="'infoVIII"><p>{{sub.infoVIII}}</p></slot>
-				</strong>
-
-				<slot name="infoIX"><p>{{sub.infoIX}}</p></slot>
-				
-				<strong class="mail-icon" v-if="sub.infoFlag">
-					<slot name="TitleIcon"><i class="iconfont" slot="TitleIcon">&#xe67b;</i></slot>
-					<slot name="'infoX"><p>{{sub.infoX}}</p></slot>
-				</strong>
-
-				<slot name="infoXI"><p>{{sub.infoXI}}</p></slot>
-				
-				<strong class="mail-icon" v-if="sub.infoFlag">
-					<slot name="TitleIcon"><i class="iconfont" slot="TitleIcon">&#xe67b;</i></slot>
-					<slot name="'infoXII"><p>{{sub.infoXII}}</p></slot>
-				</strong>
-
-				<slot name="infoXIII"><p>{{sub.infoXIII}}</p></slot>
-				
-				<strong class="mail-icon" v-if="sub.infoFlag">
-					<slot name="TitleIcon"><i class="iconfont" slot="TitleIcon">&#xe67b;</i></slot>
-					<slot name="'infoXIV"><p>{{sub.infoXIV}}</p></slot>
-				</strong>
-			</span>
-
+	<div id="ContentComp" class="infoBox">
+		
+		<div v-for="title in contentUl" :key="title.id">
+			<h1><slot name="infoH1">{{title.h1}}</slot></h1>
+			<h2><slot name="infoH2">{{title.h2}}</slot></h2>
+			<h3><slot name="infoH3">{{title.h3}}</slot></h3>
 		</div>
+		
+		<ul class="LnfoList" v-for="item in infoBox" :key="item.id">
+			<li v-for="sub in item.data" :key="sub.id">
+				<i><slot :name="sub.num">{{sub.id+'.'}}</slot></i>
+				<span><slot :name="sub.name">{{sub.txt}}</slot></span>
+			</li>
+			
+		</ul>
+
+		<p v-for="item in pBox" :key="item.id">
+			<span v-for="sub in item.data" :key="sub.id">
+				<slot :name="sub.pname">{{sub.ptxt}}</slot>
+			</span>
+		</p>
+		
 	</div>
 </template>
 
 <script>
 export default {
-	props: ['ContentUl'],
+	props: ['infoBox','pBox','infoBox_1','pBox_1','infoBox_2','pBox_2','infoBox_3','pBox_3','infoBox_4','pBox_4','infoBox_5','pBox_5','infoBox_6','pBox_6','contentUl'],
+
 	data () {
 		return {
-			
+
 		}
 	},
 
@@ -92,53 +55,58 @@ export default {
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
 }
+ul.LnfoList,p.LnfoListP {
+	padding:0;
+	margin:0;
+	width:$WBox - $CompBoxSpace;
+	height:auto;
+	list-style-type:none;
+	display:inline-flex;
+	flex-direction:column;
+	
+	
+	li {
+		width:$WBox - $CompBoxSpace;
+		height:5vh;
+		line-height: 5vh;
+		margin-bottom:1px;
+		background:hsla(0,0,0,.05);
+		i {
+			width:2.5vw;
+			height:5vh;
+			font-size: 1em;
+			font-style: normal;
+			text-align: right;
+			padding-right:0.5vw;
+			display:inline-block;
+			background:hsla(0,0,0,.2);
+		}
+	}
+	li.bgNone {
+		background:none;
+	}
+}
+div.infoBox {
+	h1{
+		font-size:1.8em;
+	}
+	h2 {
+		font-size:1.6em;
+	}
+	h3 {
+		font-size: 1.4em;
+		line-height: 4vh;
+		font-weight: normal;
+	}
+	p {
+		font-size: 1.2em;
+		line-height: 2vh;
+	}		
+	}
 div#ContentComp {
 	width:$WBox - $CompBoxSpace;
 	display:flex;
 	flex-direction:column;
-	div.ContentInfo {
-		display:inline-flex;
-		flex-direction:column;
-		h1,h2,h3,h4,p,strong {
-			line-height: 1.5vh;
-		}
-		h1{
-			font-size:1.8em;
-		}
-		h2 {
-			font-size:1.6em;
-		}
-		h3 {
-			font-size: 1.3em;
-			line-height: 5vh;
-			font-weight: normal;
-		}
-		p {
-			font-size: 1.2em;
-			line-height: 2em;
-		}
-		strong {
-			width:$WBox - $CompBoxSpace - 1vw;
-			font-size: 1em;
-			font-weight: normal;
-			display:inline-flex;
-			justify-content:flex-start;
-			align-items:center;
-			height:4vh;
-			background:hsla(0,0,0,.05);
-			padding-left: 5px;
-			i.iconfont {
-				font-size: 18px;
-				padding-right:0.3vw;
-			}
-		}
-		.ContentInfoV {
-			display:inline-flex;
-			// flex-direction:row;
-		}
-		
-	}
-	
 }
 </style>
 
