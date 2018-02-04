@@ -36,13 +36,14 @@ module.exports = [
 				componentName:'vuehtml'
 			},
 			{
+				name:'Axios',
+				componentName:'axios'
+			},
+			{
 				name:'SCSS/CSS3',
 				componentName:'scss'
 			},
-			// {
-			// 	name:'git',
-			// 	componentName:'svg'
-			// },
+			
 			{
 				name:'JS',
 				componentName:'js'

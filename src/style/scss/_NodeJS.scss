@@ -6,7 +6,7 @@ div#NodeJSComp {
 	@include FC(flex,column,center,center)
 	div.NodeJSCompBox {
 		width:$WBox - $CompBoxSpace;
-		height:$HBox * $NodeJSPage;
+		height:auto;
 		padding-top:$BoxPT;
 		display:inline-flex;
 		flex-direction:column;

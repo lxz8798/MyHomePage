@@ -19,11 +19,12 @@ import AnimaThreeDComp from '../view/Anima3D.vue';
 import NodeJSComp from '../view/NodeJS.vue';
 import TempLateComp from '../view/TempLate.vue';
 import LinksComp from '../view/Links.vue';
+import AxiosComp from '../view/Axios.vue';
 
 import BoxOne from '../components/BoxOne.vue';
 import BoxTwo from '../components/BoxTwo.vue';
 import BoxThree from '../components/BoxThree.vue';
-
+import Card from '../components/Card.vue';
 import Links from '../components/Links.vue';
 Vue.use(Router);
 
@@ -79,6 +80,12 @@ export default new Router({
       path: '/vuehtml',
       name: 'vuehtml',
       component: VueHTML,
+      
+    },
+    {
+      path: '/axios',
+      name: 'axios',
+      component: AxiosComp,
       
     },
     {

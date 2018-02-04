@@ -4,6 +4,10 @@
 
 ### 目录
 
+前端：sec 目录；主要技术：vue-cli + vue2 + vue-router2 + vuex2 + axios + es6 + sass + jQuery + TweenLite
+
+后台：server 目录；主要技术：node(koa2)+mongodb(mongoose)
+
 ```
 ├── build                      // 构建相关  
 ├── config                     // 配置相关
@@ -64,6 +68,11 @@ Update   更新以及预计更新的一些记录
 
 * 改版过的瀑布流，使用water-fall-easy为原型。                                             -- 已完成
 * 父子组件通信及复用。                                                                    -- 已完成
+* 计时触发功能。                                                                          -- 已完成
+* 使用TweenLite 制作序播动话，click后倒播事件，使用vuex做为公共状态。                     -- 已完成
+* 使用TweenLite及JS 制作视差功能。                                                        -- 已完成
+* 使用JS完成离开顶部和接近底部，以及点击的触发事件。                                      -- 已完成
+* markdown编辑器嵌入和解析                                                                -- 正在完成
 * Mock 前后端分离，模拟后端实现数据交互。                                                 -- 正在完成
 * Axios拦截。                                                                             -- 下个版本完成
 * Token权限分配。                                                                         -- 下个版本完成

@@ -1,0 +1,56 @@
+$VueHtmlPage:3;
+@media (max-width: 767px) {
+	.markdown-body {
+		padding: 15px;
+	}
+}
+div#vuePageCM {
+	width:$WBox;
+	height:30vh;
+}
+div#VueHtmlComp {
+	width:$WBox;
+	height:$HBox * $VueHtmlPage;
+	min-height:$HBox;
+	@include FC(flex,column,center,center)
+	div.VueHtmlCompBox {
+		width:$WBox - $CompBoxSpace;
+		height:auto;
+		padding-top:$BoxPT;
+		display:inline-flex;
+		flex-direction:column;
+		flex:1;
+		div.Bread,div.AuthorInfo {
+			width:$WBox;
+			height:5vh;
+			line-height: 5vh;
+
+		}
+		div.Bread {
+			
+			
+		}
+		div.AuthorInfo {
+			i {
+				padding-right:5px;
+			}
+		}
+		div.VueHtmlTag {
+			width:$WBox;
+			height:10vh;
+			display:inline-flex;
+			align-items:center;
+			span {
+				margin-right:1vw;
+			}
+		}
+		h3 {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 1.4em;
+			height: 4vh;
+			line-height: 4vh;
+			margin-bottom:4vh;
+		}
+	}
+}
