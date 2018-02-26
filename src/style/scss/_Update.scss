@@ -1,0 +1,44 @@
+$UpdatePage:5;
+div#UpdateComp {
+	width:$WBox;
+	height:$HBox * $UpdatePage;
+	min-height:$HBox;
+	@include FC(flex,column,center,center)
+	div.UpdateCompBox {
+		width:$WBox - $CompBoxSpace;
+		height:$HBox - 20vh;
+		p.Blank {
+			height:10vh;
+		}
+		@include FC(flex,column,center,center)
+		ul {
+			@include FC(flex,column,center,center)
+			li {
+				color:#434343;
+			}
+			li.t1 {
+				font-size:1.6em;
+				padding-top: 3vh;
+			}
+			li.t2 {
+				font-size:1.2em;
+				padding-top: 2vh;
+			}
+			li.t4 {
+				padding-top: 1vh;
+			}
+			li.Blank {
+				height:5vh;
+			}
+		}
+
+	}
+	div.bgT {
+		width:1200px;
+		height:80px;
+		background: #ededed;
+		font-size: 1.3em;
+		color:#434343;
+		@include FC(flex,column,center,center)
+	}
+}

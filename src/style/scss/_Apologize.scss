@@ -1,0 +1,16 @@
+@import '../base/Base.scss';
+@import '../mixin/mixin.scss';
+div#apologizeBox {
+  width:$WBox;
+  height:$HBox;
+  @include FC(flex,column,center,center);
+  transform: translate(-5vw,0);
+  	h1.BigT {
+		width:$WBox;
+		height:25vh;
+		font-size: 30px;
+		font-weight: normal;
+		color:#353535;
+		@include FC(flex,column,center,center);
+	}
+}

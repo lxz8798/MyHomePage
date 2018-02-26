@@ -7,9 +7,9 @@ const serviceModule = {
         url: '/cg',
         method: 'post'
     },
-    getPage: {
-        url: '/static/data/page.json',
-        method: 'post'
+    Register: {
+        url: '/api/register',
+        method: 'post',
     },
     getMembers: {
         url: '/static/data/members.json',

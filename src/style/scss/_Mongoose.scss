@@ -1,0 +1,41 @@
+@import '../style/base/Base.scss';
+@import '../style/mixin/mixin.scss';
+$MongoosePage:2;
+div#MongooseComp {
+	width:$WBox;
+	height:$HBox * $MongoosePage;
+	min-height:$HBox;
+	@include FC(flex,column,center,center)
+	div.MongooseCompBox {
+		width:$WBox - $CompBoxSpace;
+		height:auto;
+		padding-top:$BoxPT;
+		display:inline-flex;
+		flex-direction:column;
+		flex:1;
+		div.Bread,div.AuthorInfo {
+			width:$WBox;
+			height:5vh;
+			line-height: 5vh;
+
+		}
+		div.Bread {
+			
+			
+		}
+		div.AuthorInfo {
+			i {
+				padding-right:5px;
+			}
+		}
+		div.MongooseTag {
+			width:$WBox;
+			height:10vh;
+			display:inline-flex;
+			align-items:center;
+			span {
+				margin-right:1vw;
+			}
+		}
+	}
+}

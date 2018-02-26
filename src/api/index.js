@@ -9,12 +9,9 @@ const CancelToken = axios.CancelToken;
 axios.interceptors.request.use(config => {
 	//请求之前，取消当前正在进行的相同请求
 
-	// if (promiseArr[config.url]) {
-	// 	promiseArr[config.url] ('取消操作')
-	// 	promiseArr[config.url] = cancel
-	// } else {
-	// 	promiseArr[config.url] = cancel
-	// }
+	if ($store.state.token) {
+		config.headers.Authorization = `token ${$store.state.token}`
+	}
 
 	return config
 },error => {

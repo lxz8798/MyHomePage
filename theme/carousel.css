@@ -232,7 +232,8 @@
   overflow-x: hidden;
   position: relative; }
   .el-carousel__container {
-    position: relative; }
+    position: relative;
+    height: 300px; }
   .el-carousel__arrow {
     border: none;
     outline: none;

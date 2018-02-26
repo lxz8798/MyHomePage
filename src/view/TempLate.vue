@@ -1,8 +1,14 @@
 <template>
-	<div id="TempLateComp">
+	<div id="TemplateComp">
 		<header-nav></header-nav>
-		<div class="TempLateCompBox">
-			
+		<div class="TemplateCompBox">
+			<!-- <bread-crumb>
+				<template scoped="props">
+					<span slot="Bread_2">TempLate</span>
+				</template>
+			</bread-crumb> -->
+
+			<apologize></apologize>
 		</div>
 		<my-footer></my-footer>
 	</div>
@@ -11,10 +17,11 @@
 <script>
 import HeaderNav from '../components/MyHeaderNav.vue';
 import MyFooter from '../components/MyFooter.vue';
-
+import BreadCrumb from '../components/BreadCrumb.vue';
+import apologize from '../components/Apologize.vue';
 
 export default {
-	components:{HeaderNav,MyFooter},
+	components:{HeaderNav,MyFooter,apologize,BreadCrumb},
 	data () {
 		return {
 
@@ -24,10 +31,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../style/base/Base.scss';
-div.TempLateCompBox {
-	width:$WBox;
-	height:$HBox;
-}
+@import '../style/scss/Template.scss';
+
 </style>
 

@@ -3,10 +3,8 @@
 	<header-nav></header-nav>
 	<box-one></box-one>
 	<box-two></box-two>
-	<box-three></box-three>
-	<box-four></box-four>
+	<atlas></atlas>
 	<my-footer></my-footer>
-	<!-- <text-and-pic></text-and-pic> -->
 	</div>
 </template>
 
@@ -14,12 +12,10 @@
 import HeaderNav from '../components/MyHeaderNav.vue';
 import BoxOne from '../components/BoxOne.vue';
 import BoxTwo from '../components/BoxTwo.vue';
-import BoxThree from '../components/BoxThree.vue';
-import BoxFour from '../components/BoxFour.vue';
+import atlas from '../components/Atlas.vue';
 import MyFooter from '../components/MyFooter.vue';
-// import TextAndPic from '../components/TextAndPic.vue';
 export default {
-	components:{HeaderNav,BoxOne,BoxTwo,BoxThree,BoxFour,MyFooter},
+	components:{HeaderNav,BoxOne,BoxTwo,atlas,MyFooter},
 	data () {
 		return {
 			
@@ -29,5 +25,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	
+
 </style>

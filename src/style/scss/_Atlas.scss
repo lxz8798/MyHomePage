@@ -1,0 +1,135 @@
+@import '../style/base/Base.scss';
+@import '../style/mixin/mixin.scss';
+$g1x:1;
+$g2x:2;
+$g3x:3;
+$g4x:4;
+$g5x:5;
+div#AtlasComp {
+	margin-top: 10vh;
+	width:$WBox;
+	
+	h1.BigT {
+		width:$WBox;
+		height:25vh;
+		font-size: 30px;
+		font-weight: normal;
+		color:#353535;
+		@include FC(flex,column,center,center);
+	}
+	@include FC(flex,column,center,center)
+	div.AtlasCompBox {
+		width:$WBox;
+		height:inherit;
+		ul {
+			width:93vw;
+			pardding:0;
+			margin:0;
+			@include FC(flex,row,center,center)
+			li{
+				width:10vw;
+				height:13vh;
+				background: #cfcfcf;
+
+				@include FC(flex,column,center,center);
+				i{
+					font-size: 30px;
+				}
+			}
+
+		}
+		ul.ul1 {
+			height:13vh * $g2x;
+			li:nth-child(1) {
+				width:10vw * $g3x;
+				height:inherit;
+				background: hsla(78,50,50,.5);
+			}
+			li:nth-child(2) {
+				width:10vw * $g2x;
+				height:inherit;
+				background: hsla(160,50,50,.5);
+			}
+			li:nth-child(3) {
+				width:10vw * $g4x;
+				height:inherit;
+				background: hsla(230,50,50,.5);
+			}
+			li:nth-child(4) {
+				width:10vw * $g2x;
+				height:inherit;
+				background: hsla(39,50,50,.5);
+			}
+		}
+		ul.ul2 {
+			height:13vh * $g2x;
+			li:nth-child(1) {
+				width:10vw * $g5x;
+				height:inherit;
+				background: hsla(154,50,50,.5);
+			}
+			li:nth-child(2) {
+				width:10vw * $g2x;
+				height:inherit;
+				background: hsla(94,50,50,.5);
+			}
+			li:nth-child(3) {
+				width:10vw * $g3x;
+				height:inherit;
+				background: hsla(192,50,50,.5);
+			}
+		}
+		ul.ul3 {
+			height:13vh * $g2x;
+			li:nth-child(1) {
+				width:10vw * $g3x;
+				height:inherit;
+				background: hsla(87,50,50,.5);
+			}
+			li:nth-child(2) {
+				width:10vw * $g2x;
+				height:inherit;
+				background: hsla(130,50,50,.5);
+			}
+			li:nth-child(3) {
+				width:10vw * $g4x;
+				height:inherit;
+				background: hsla(230,50,50,.5);
+			}
+			li:nth-child(4) {
+				width:10vw * $g3x;
+				height:inherit;
+				background: hsla(160,50,50,.5);
+			}
+			li:nth-child(5) {
+				width:10vw * $g4x;
+				height:inherit;
+				background: hsla(50,50,50,.5);
+			}
+		}
+		div.Bread,div.AuthorInfo {
+			width:$WBox;
+			height:5vh;
+			line-height: 5vh;
+
+		}
+		div.Bread {
+			
+			
+		}
+		div.AuthorInfo {
+			i {
+				padding-right:5px;
+			}
+		}
+		div.AtlasTag {
+			width:$WBox;
+			height:10vh;
+			display:inline-flex;
+			align-items:center;
+			span {
+				margin-right:1vw;
+			}
+		}
+	}
+}

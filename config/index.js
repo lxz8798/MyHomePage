@@ -2,7 +2,7 @@
 // Template version: 1.2.7
 // see http://vuejs-templates.github.io/webpack for documentation.
 //使用代理
-const HOST =process.env.NODE_ENV === 'production' ? 'http://api.douban.com/v2' : 'http://localhost:8081';
+// const HOST =process.env.NODE_ENV === 'production' ? 'http://api.douban.com/v2' : 'http://localhost:8081';
 const path = require('path')
 
 module.exports = {
@@ -10,13 +10,13 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',
+    assetsPublicPath: '/',
     proxyTable: {
       '/api':{
-          target:'http://127.0.0.1:8080',
+          target:'http://localhost:3000',
           changeOrigin:true,
           pathRewrite:{
-            '^/api':'/dist/#'
+            '^/api':'/api'
           }
       }
     },

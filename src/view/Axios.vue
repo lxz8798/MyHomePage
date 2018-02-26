@@ -11,7 +11,7 @@
 
 			<div class="AuthorInfo">
 				<span><i class="el-icon-edit"></i>作者：站长</span>
-				<span><i class="el-icon-time"></i>发表时间:2018/1/23</span>
+				<span><i class="el-icon-time"></i>发表时间 : 2018/1/23</span>
 			</div>
 
 			<div class="AxiosTag">
@@ -23,6 +23,8 @@
 				:content-ul="contentUl" 
 				id="1">
 			</content-comp>
+
+			<codemirror v-model="code" :options="cmOptions" :value="code" ></codemirror>
 
 		</div>
 		
@@ -41,11 +43,119 @@ export default {
 		data () {
 		return {
 			name:'Axios',
+			code:`import axios from 'axios'
+import {Message} from 'element-ui'
+
+//这个封装来自于https://segmentfault.com/a/1190000012804684
+
+axios.interceptors.request.use(config=> {
+  return config;
+}, err=> {
+  Message.error({message: '请求超时!'});
+  return Promise.resolve(err);
+})
+axios.interceptors.response.use(data=> {
+  if (data.status && data.status == 200 && data.data.status == 'error') {
+    Message.error({message: data.data.msg});
+    return;
+  }
+  return data;
+}, err=> {
+  if (err.response.status == 504||err.response.status == 404) {
+    Message.error({message: '您的请求被服务器吃了⊙﹏⊙∥'});
+  } else if (err.response.status == 403) {
+    Message.error({message: '权限不足,请联系管理员!'});
+  }else {
+    Message.error({message: '未知错误!'});
+  }
+  return Promise.resolve(err);
+})
+
+let base = 'http://localhost:3000';
+
+export const postRequest = (url, params,callback) => {
+  return axios({
+    method: 'post',
+    url: '\${base}\${url}',
+    data: params,
+    transformRequest: [function (data) {
+      let ret = ''
+      for (let it in data) {
+        ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&'
+      }
+      return ret
+    }],
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    }
+  });
+}
+export const uploadFileRequest = (url, params) => {
+  return axios({
+    method: 'post',
+    url: '\${base}\${url}',
+    data: params,
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  });
+}
+export const putRequest = (url, params) => {
+  return axios({
+    method: 'put',
+    url: '\${base}\${url}',
+    data: params,
+    transformRequest: [function (data) {
+      let ret = ''
+      for (let it in data) {
+        ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&'
+      }
+      return ret
+    }],
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    }
+  });
+}
+export const deleteRequest = (url) => {
+  return axios({
+    method: 'delete',
+    url: '\${base}\${url}'
+  });
+}
+export const getRequest = (url) => {
+  return axios({
+    method: 'get',
+    url: '\${base}\${url}'
+  });
+}
+
+如何使用：
+在入口文件里
+import {getRequest} from './api/httpAxios';
+import {postRequest} from './api/httpAxios';
+import {deleteRequest} from './api/httpAxios';
+import {putRequest} from './api/httpAxios';
+
+Vue.prototype.getRequest = getRequest;
+Vue.prototype.postRequest = postRequest;
+Vue.prototype.deleteRequest = deleteRequest;
+Vue.prototype.putRequest = putRequest;
+`
+,
+			cmOptions:{
+	      		tabSize: 4,
+		        styleActiveLine: true,
+		        lineNumbers: true,
+		        line: true,
+		        mode: 'text/javascript',
+		        lineWrapping: true,
+		        readOnly:'nocursor',
+		        theme:'Monokai'
+	      	},
 			contentUl:[
 				{	
-					h1:'首先感谢NodeJS,让我从前端设计转职成全栈设计，But。。',
-					h2:'在学习过程我遇到了很多坑',
-					h3:'就来说说我今天遇到的坑，网上有很多资料，都说在CentOS下安装NodeJS要先安装GCC,MPFR，MFC等，拿阿里云来说，阿里云的CentOS7是自带GCC4.8的，如果感觉版本太低去重新安装或更新GCC，就被坑了，运气好也许过了，也许不行你会得到一堆报错，正确的应该是直接安装NodeJS。',
+					h1:'自己这个站点中用到的Axios，默认配置，感觉挺好用，留作以后他用。',
 					flag:true
 				}
 			],
@@ -72,6 +182,7 @@ export default {
 					tag:'request'
 				}
 			]
+
 		}
 	},
 	mounted(){
@@ -91,46 +202,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../style/base/Base.scss';
-@import '../style/mixin/mixin.scss';
-$AxiosPage:3;
-div#AxiosComp {
-	width:$WBox;
-	height:$HBox * $AxiosPage;
-	min-height:$HBox;
-	@include FC(flex,column,center,center)
-	div.AxiosCompBox {
-		width:$WBox - $CompBoxSpace;
-		height:auto;
-		padding-top:$BoxPT;
-		display:inline-flex;
-		flex-direction:column;
-		flex:1;
-		div.Bread,div.AuthorInfo {
-			width:$WBox;
-			height:5vh;
-			line-height: 5vh;
-
-		}
-		div.Bread {
-			
-			
-		}
-		div.AuthorInfo {
-			i {
-				padding-right:5px;
-			}
-		}
-		div.AxiosTag {
-			width:$WBox;
-			height:10vh;
-			display:inline-flex;
-			align-items:center;
-			span {
-				margin-right:1vw;
-			}
-		}
-	}
-}
+@import '../style/scss/Axios.scss';
 </style>
 

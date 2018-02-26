@@ -45,7 +45,8 @@ Vue.use(Vuex);
 //状态
 const state = {	
 	defalueComp:'Carousel',
-	tl:{}
+	tl:{},
+	token:'test'
 }
 const mutations = {
 	isShow (state,currentview) {

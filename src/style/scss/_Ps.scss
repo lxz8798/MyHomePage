@@ -1,0 +1,75 @@
+@import '../style/base/Base.scss';
+@import '../style/mixin/mixin.scss';
+div#PsComp {
+	width:$WBox;
+	height:$HBox;
+	div.PsCompBox {
+		width:$WBox;
+		@include FC(flex,column,center,center);
+		.p2 {
+			div.l {
+				order:1;
+				transform: translate(3vw,4vh);
+			} 
+			div.r {
+				order:2;
+				transform: translate(8vw,-4vh);
+			}
+		}
+		div.l { 
+			width:30vw;
+			height:inherit;
+			
+			@include FC(flex,column,flex-start,center);
+			p {
+				color:#434343;
+			}
+			p.t1 {
+				font-size: 1.8em;
+				transform: translate(10vw,8vh);
+			}
+			p.t2 {
+				font-size: 1.2em;
+				transform: translate(10vw,5vh);
+			}
+			p.t3 {
+				font-size: 1em;
+				transform: translate(10vw,7vh);
+			}
+			p.t4 {
+				font-size: 1em;
+				transform: translate(10vw,5vh);
+			}
+		}
+		div.r { 
+			width:70vw;
+			height:inherit;
+			transform: translate(20vw,10vh);
+			img {
+				width: 400px;
+				height:400px;
+				transform: translate(3vw,8vh);
+			}
+			span.ITTr {
+				width:30vw;
+				height:30vh;
+			}
+		}
+	}
+	div.ITTCompBox {
+		div.l {
+			transform: translate(-8vw,0);
+			order:2;
+		}
+		div.r {
+			transform: translate(-4vw,0);
+			order:1;
+			g {
+				fill:hsla(0,0,0,1);
+			}
+			span.ITTr {
+				
+			}
+		}
+	}
+}

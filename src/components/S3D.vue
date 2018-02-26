@@ -32,16 +32,66 @@ export default {
 	  		}
   		],
   		items:[
-  			{name:'img1',img:'http://f.hiphotos.baidu.com/image/h%3D300/sign=4a0a3dd10155b31983f9847573ab8286/503d269759ee3d6db032f61b48166d224e4ade6e.jpg'},
-  			{name:'img2',img:'http://d.hiphotos.baidu.com/image/h%3D300/sign=9af99ce45efbb2fb2b2b5e127f4b2043/a044ad345982b2b713b5ad7d3aadcbef76099b65.jpg'},
-  			{name:'img3',img:'http://h.hiphotos.baidu.com/image/h%3D300/sign=836eeeae16950a7b6a3548c43ad0625c/c8ea15ce36d3d5397966ba5b3187e950342ab0cb.jpg'},
-  			{name:'img4',img:'http://e.hiphotos.baidu.com/image/h%3D300/sign=8d3a9ea62c7f9e2f6f351b082f31e962/500fd9f9d72a6059099ccd5a2334349b023bbae5.jpg'},
-  			{name:'img5',img:'http://b.hiphotos.baidu.com/image/h%3D300/sign=0e422b4e90504fc2bd5fb605d5dce7f0/c8177f3e6709c93d51a3a9b1943df8dcd1005426.jpg'},
-  			{name:'img6',img:'http://g.hiphotos.baidu.com/image/h%3D300/sign=7e63024326f5e0fef1188f016c6134e5/d788d43f8794a4c2f362ea7105f41bd5ad6e3922.jpg'},
-  			{name:'img7',img:'http://d.hiphotos.baidu.com/image/h%3D300/sign=edca6824a2773912db268361c8188675/9922720e0cf3d7ca600211eff91fbe096a63a9b6.jpg'},
-  			{name:'img8',img:'http://f.hiphotos.baidu.com/image/h%3D300/sign=4a0a3dd10155b31983f9847573ab8286/503d269759ee3d6db032f61b48166d224e4ade6e.jpg'},
-  			{name:'img9',img:'http://g.hiphotos.baidu.com/image/h%3D300/sign=bc01b87caf0f4bfb93d09854334e788f/10dfa9ec8a1363275cd315d09a8fa0ec08fac713.jpg'},
-  			{name:'img10',img:'http://f.hiphotos.baidu.com/image/h%3D300/sign=4a0a3dd10155b31983f9847573ab8286/503d269759ee3d6db032f61b48166d224e4ade6e.jpg'}
+  			{
+  				name:'img1',
+  				img:require('./../assets/shan/8.png')
+  			},
+  			{
+  				name:'img2',
+  				img:require('./../assets/shan/1.png')
+  			},
+  			{
+  				name:'img3',
+  				img:require('./../assets/shan/6.png')
+  			},
+  			{	
+  				name:'img4',
+  				img:require('./../assets/shan/9.png')
+  			},
+  			{
+  				name:'img5',
+  				img:require('./../assets/shan/5.png')
+  			},
+  			{
+  				name:'img6',
+  				img:require('./../assets/shan/9.png')
+  			},
+  			{
+  				name:'img7',
+  				img:require('./../assets/shan/3.png')
+  			},
+  			{
+  				name:'img8',
+  				img:require('./../assets/shan/7.png')
+  			},
+  			{
+  				name:'img9',
+  				img:require('./../assets/shan/7.png')
+  			},
+  			{
+  				name:'img10',
+  				img:require('./../assets/shan/7.png')
+  			},
+  			{
+  				name:'img11',
+  				img:require('./../assets/shan/7.png')
+  			},
+  			{
+  				name:'img12',
+  				img:require('./../assets/shan/7.png')
+  			},
+  			{
+  				name:'img13',
+  				img:require('./../assets/shan/7.png')
+  			},
+  			{
+  				name:'img14',
+  				img:require('./../assets/shan/7.png')
+  			},
+  			{
+  				name:'img15',
+  				img:require('./../assets/shan/7.png')
+  			}
   		]
   		
 		}
@@ -79,5 +129,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './src/style/scss/BoxTwo.scss';
+@import './src/style/scss/S3D.scss';
 </style>

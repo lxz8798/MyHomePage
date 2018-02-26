@@ -1,32 +1,70 @@
+@import '../style/base/Base.scss';
 div#SvgIco {
-	width:100vw;
-	height:100vh;
+	width:$WBox;
+	height:$HBox;
 	overflow: hidden;
 	@include FC(flex,column,center,center);
-	> div#SvgIco > svg {
-		width:100vw;
-		height:100vh;
-		flex:1;
+	div.IntroduceBox {
+		width:$WBox;
+		height:$HBox - 10vh;
+		@include FC(flex,row,center,center);
+		div.l { 
+			width:30vw;
+			height:inherit;
+			// @include FC(flex,column,flex-start,center);
+			p {
+				
+			}
+			p.t1 {
+				font-size: 4em;
+				color:#FFF;
+				transform: translate(10vw,23vh);
+			}
+			p.t2 {
+				font-size: 2em;
+				color:#FFF;
+				transform: translate(10vw,18vh);
+			}
+			p.t3 {
+				font-size: 1em;
+				color:#FFF;
+				transform: translate(10vw,18vh);
+			}
+			p.t4 {
+				font-size: 1em;
+				color:#FFF;
+				transform: translate(10vw,18vh);
+			}
+		}
+		div.r { 
+			width:70vw;
+			height:inherit;
+			transform: translate(20vw,0);
+			div.svgBox {
+				width:65vw;
+				height:90vh;
+			}
+		}
 	}
-	> div.buttonBox {
-			width:100vw;
-			height:10vh;
-			margin-bottom:2vh;
-			margin-right: 3vw;
-			@include FC(flex,column,center,center);
-		> .backB {
+	
+	div.buttonBox {
+		width:100vw;
+		height:10vh;
+		@include FC(flex,row,center,center);
+		.backB {
 			width:100px;
 			background:none;
 			border:1px solid hsla(220,50%,80%,.3);
 			line-height: 10px;
 			transition: all 0.3s ease-in;
 			color:white;
+			transition: all 0.5s ease-out;
 		}
-		> .backB:hover {
+		.backB:hover {
 			background: white;
 			border:1px solid hsla(220,50%,100%,1);
 			color: hsla(220,80%,50%,1);
-			transition: all 0.5s ease-out;
+			
 		}
 	}
 }

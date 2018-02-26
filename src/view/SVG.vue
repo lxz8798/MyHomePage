@@ -17,7 +17,7 @@ export default {
 	components:{HeaderNav,MyFooter},
 	data () {
 		return {
-
+			
 		}
 	}
 }

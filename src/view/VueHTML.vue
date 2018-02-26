@@ -26,9 +26,9 @@
 
 				<h3>整合markDown在线编辑器，暂时无法保存，后期开放。</h3>
 
-				<mavon-editor v-model="value" :ishljs = "true" :toolbarsFlag="true" :editable="true" height="300" />
+				<mavon-editor v-model="value" :ishljs = "true" :toolbarsFlag="true" :editable="true" />
 				
-				<h3>整合codeMirror在线编辑器，禁止了编辑功能，后期开放。</h3>
+				<h3>整合codeMirror在线编辑器，禁止了编辑功能</h3>
 					
 				<codemirror v-model="code" :options="cmOptions" :value="code" ></codemirror>
 				

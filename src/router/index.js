@@ -16,9 +16,13 @@ import MGComp from '../view/MG.vue';
 import SVGComp from '../view/SVG.vue';
 import AnimaJSComp from '../view/AnimaJS.vue';
 import AnimaThreeDComp from '../view/Anima3D.vue';
+import MongooseComp from '../view/Mongoose.vue';
 import NodeJSComp from '../view/NodeJS.vue';
 import TempLateComp from '../view/TempLate.vue';
 import LinksComp from '../view/Links.vue';
+import RegComp from '../view/Register.vue';
+import UpdateComp from '../view/Update.vue';
+import LoginComp from '../view/Login.vue';
 import AxiosComp from '../view/Axios.vue';
 
 import BoxOne from '../components/BoxOne.vue';
@@ -26,11 +30,11 @@ import BoxTwo from '../components/BoxTwo.vue';
 import BoxThree from '../components/BoxThree.vue';
 import Card from '../components/Card.vue';
 import Links from '../components/Links.vue';
+
 Vue.use(Router);
 
-export default new Router({
-	// mode:'hash',
-	base: __dirname,
+const router = new Router({
+	mode:'history',
   routes: [
     {
       path: '/',
@@ -68,6 +72,9 @@ export default new Router({
       path: '/photogr',
       name: 'photogr',
       component: PhotoGRComp,
+      // meta:{
+      //   requireAuth: true
+      // }
          
     },
     {
@@ -135,6 +142,12 @@ export default new Router({
       component: NodeJSComp,
     },
     {
+      path: '/mongodb',
+      name: 'mongodb',
+      component: MongooseComp,
+    },
+
+    {
       path: '/template',
       name: 'template',
       component: TempLateComp,
@@ -144,9 +157,49 @@ export default new Router({
       name: 'links',
       component: LinksComp,
     },
+    // {
+    //   path: '/blog',
+    //   name: 'blog',
+    //   component: NodeJSComp,
+    // },
+    {
+      path: '/update',
+      name: 'update',
+      component: UpdateComp,
+    },
+    // {
+    //   path: '/signup',
+    //   name: 'signup',
+    //   component: RegComp,
+    // },
+    // {
+    //   path: '/login',
+    //   name: 'login',
+    //   component: LoginComp,
+    //   meta:{
+    //     requireAuth: true
+    //   }
+    // },
     {
       path: "*",
       redirect: "/"
     }
   ]
 });
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.requireAuth) { //判断是否需要登录权限
+    if (this.$store.state.token) { //判断是否需要登录
+      next()
+    } else {
+      next({
+        path:'/login',
+        query:{redirect: to.fullPath}
+      })
+    }
+  } else {
+    next()
+  }
+})
+
+export default router

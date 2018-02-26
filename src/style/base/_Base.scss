@@ -1,6 +1,6 @@
 $FontSize:12px;
 $FB:bold;
-$FF:"Microsoft YaHei","Arial","黑体";
+$FF:"Microsoft YaHei","微软雅黑","Arial","黑体";
 $WBox:100vw;
 $HBox:100vh;
 $Page:2;
@@ -16,6 +16,7 @@ body {
   height:$HBox;
   min-height:$HBox;
   overflow-x:hidden;
+  color:#434343;
 }
 
 div#app {

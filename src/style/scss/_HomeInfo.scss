@@ -15,19 +15,21 @@ div.HomeInfo {
 		font-weight: bold;
 		font-size:1.2em; 
 		font-weight: normal;
+		color:white;
 	}
 	li:nth-child(1){ 
 		height:10vh;
 		font-size:1.5em;
+		
 		// background: -webkit-linear-gradient(hsla(178,50,12,1) 20%, hsla(178,80,5,1));
 		// background: -o-linear-gradient(hsla(178,50,12,1) 20%, hsla(178,80,5,1));
-		background: linear-gradient(hsla(178,50,12,1) 20%, hsla(178,80,5,1));
-		-webkit-background-clip: text;
-		-o-background-clip: text;
-		-ms-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		-o-text-fill-color: transparent;
-		-ms-text-fill-color: transparent;
+		// background: linear-gradient(hsla(180,20,12,1) 20%, hsla(10,50,5,1));
+		// -webkit-background-clip: text;
+		// -o-background-clip: text;
+		// -ms-background-clip: text;
+		// -webkit-text-fill-color: transparent;
+		// -o-text-fill-color: transparent;
+		// -ms-text-fill-color: transparent;
 	}
 	li:nth-child(2){ font-size:1.2em; font-weight: bold;}
 }

@@ -1,0 +1,60 @@
+@import '../style/base/Base.scss';
+@import '../style/mixin/mixin.scss';
+
+div#ITTComp {
+	width:$WBox;
+	height:$HBox;
+	h1.BigT {
+		width:$WBox;
+		height:30vh;
+		font-size: 30px;
+		padding-top: 5vh;
+		font-weight: normal;
+		color:#353535;
+		@include FC(flex,column,center,center);
+	}
+	div.ITTCompBox {
+		width:inherit;
+		height:$HBox - 40vh;
+		@include FC(flex,row,center,center);
+		div.l { 
+			width:30vw;
+			height:inherit;
+			@include FC(flex,column,flex-start,center);
+			p {
+				color:#434343;
+			}
+			p.t1 {
+				font-size: 1.8em;
+				transform: translate(5vw,0);
+			}
+			p.t2 {
+				font-size: 1.2em;
+				transform: translate(5vw,0);
+			}
+			p.t3 {
+				font-size: 1em;
+				transform: translate(5vw,0);
+			}
+			p.t4 {
+				font-size: 1em;
+				transform: translate(5vw,0);
+			}
+		}
+		div.r { 
+			width:60vw;
+			height:inherit;
+			@include FC(flex,column,center,center);
+			img {
+				width: 400px;
+				height:400px;
+			}
+			span.ITTr {
+				width:inherit;
+				height:inherit;
+				@include FC(flex,column,center,center);
+			}
+		}
+
+	}
+}

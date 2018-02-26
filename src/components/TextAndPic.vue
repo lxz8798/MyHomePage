@@ -1,10 +1,13 @@
 <template>
 <div id="PicImgRow">
 	<div class="l">
+		<p class="Blank"></p>
 		<h2><slot name="H3Title">暂时没有更新内容</slot></h2>
-		<p class="p1"><slot name="TextFirst">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis eos ut, veritatis ad eaque quaerat, </slot></p>
-		<p><slot name="TextSecond">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis eos ut, veritatis ad eaque quaerat, quidem</slot></p>
-		<p><slot  class="TextThirth" name="TextThirth">Lorem ipsum dolor sit amet harum esse, laborum ipsam aspernatur! Fugiat velit earum fuga eaque quisquam hic quod!</slot></p>
+		<ul>
+			<li><slot name="txt1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dolorem autem quaerat veritatis iusto, dignissimos et repudiandae, aspernatur, asperiores debitis reiciendis doloremque accusamus. Accusamus nesciunt, nam totam praesentium amet necessitatibus?</slot></li>
+			<li><slot name="txt2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat blanditiis eos quas</slot></li>
+			<li><slot name="txt3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ipsum, a odit ex laborum perferendis beatae rem natus harum magnam error consequuntur quos aspernatur</slot></li>
+		</ul>
 		<!--<p><slot name="TextFourth">Lorem ipsum dolor sit amet quidem, harum esse, laborum ipsam aspernatur! Fugiat velit earum fuga eaque quisquam hic quod!</slot></p>
 		<p><slot name="TextFifth">Lorem ipsum dolor sit amet</slot></p>
 		<p><slot name="TextSixth">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis eos ut, veritatis ad eaque quaerat</slot></p> -->
@@ -15,14 +18,15 @@
 		</ul> -->
 	</div>
 	<div class="r">
-		<slot name="ImgFirst"><img :src="img" /></slot>
+		<scale-module></scale-module>
 	</div>
 </div>
 </template>
 
 <script>
-
+import ScaleModule from '../components/S3D.vue';
 export default {
+	components:{ScaleModule},
 	data () {
 		return {
 			// TextUL:[

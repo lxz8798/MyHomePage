@@ -1,20 +1,36 @@
 <template>
 <div id="SvgIco">
+	<div class="IntroduceBox">
+		<div class="l">
+			<p class="t1">我叫李啸竹</p>
+			<p class="t2">目前求职中</p>
+			<p class="t3">应聘的职位:</p>
+			<p class="t4">/ 全栈设计师 / Node全栈 / Web前端开发 / 高级网页设计 /</p>
+		</div>
+		
+		
+		<div class="r">
+			
+			<div class="svgBox">
+				<svg viewBox="0 0 850 730" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<g><polygon class="yl2" fill="white" stroke="none" points="0,120 400,660 60,430 120,340 20,320 0,120" /></g>
+					<g><polygon class="yl3" fill="white" stroke="none" points="0,120 400,660 60,430 120,340 20,320 0,120" transform="matrix(-1,0,0,1,800,0)" /></g>
+					<g><polygon class="nei" fill="hsla(210,60%,6%,1)" stroke="none" points="80,0 720,0 800,120 400,660 0,120" /></g>
+					<g><polygon class="ld1" fill="hsla(220,60%,8%,1)" stroke="hsla(210,50%,4%,1)" points="300,145 270,260 310,370 490,370 530,260 500,145" /></g>
+					<g><polygon class="ld2" fill="hsla(220,60%,8%,1)" stroke="hsla(210,50%,4%,1)" points="490,370 550,458 400,660 250,458 310,370" /></g>
+					<g><polygon class="yl1" fill="white" stroke="none" points="0,120 80,0 320,140 280,340" /></g>
+					<g><polygon class="yl4" fill="white" stroke="none" points="0,120 80,0 320,140 280,340" transform="matrix(-1,0,0,1,800,0)" /></g>
+					<!-- <g class="tipSquare" stroke="hsla(220,50%,80%,.3)" stroke-width="10">
+						<polygon points="565,585 590,630 630,610" fill="white"/>
+						<rect x="580" y="600" rx="10" ry="10" width="360" height="60" fill="white"/>
+					</g>
+					<g><text class="svgText" x="600" y="638" fill="hsla(220,60%,8%,1)" stroke-width="0" style="font-size:15px;">{{msg}}</text></g> -->
+				</svg>
+			</div>
+
+		</div>
+	</div>
 	
-	<svg viewBox="0 -50 850 730" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<g><polygon class="yl2" fill="white" stroke="none" points="0,120 400,660 60,430 120,340 20,320 0,120" /></g>
-		<g><polygon class="yl3" fill="white" stroke="none" points="0,120 400,660 60,430 120,340 20,320 0,120" transform="matrix(-1,0,0,1,800,0)" /></g>
-		<g><polygon class="nei" fill="hsla(210,60%,6%,1)" stroke="none" points="80,0 720,0 800,120 400,660 0,120" /></g>
-		<g><polygon class="ld1" fill="hsla(220,60%,8%,1)" stroke="hsla(210,50%,4%,1)" points="300,145 270,260 310,370 490,370 530,260 500,145" /></g>
-		<g><polygon class="ld2" fill="hsla(220,60%,8%,1)" stroke="hsla(210,50%,4%,1)" points="490,370 550,458 400,660 250,458 310,370" /></g>
-		<g><polygon class="yl1" fill="white" stroke="none" points="0,120 80,0 320,140 280,340" /></g>
-		<g><polygon class="yl4" fill="white" stroke="none" points="0,120 80,0 320,140 280,340" transform="matrix(-1,0,0,1,800,0)" /></g>
-		<g class="tipSquare" stroke="hsla(220,50%,80%,.3)" stroke-width="10">
-			<polygon points="565,585 590,630 630,610" fill="white"/>
-			<rect x="580" y="600" rx="10" ry="10" width="360" height="60" fill="white"/>
-		</g>
-		<g><text class="svgText" x="600" y="638" fill="hsla(220,60%,8%,1)" stroke-width="0" style="font-size:15px;">{{msg}}</text></g>
-	</svg>
 	<div class="buttonBox">
 		<el-button plain class="backB" @click="SVGReverse">返回</el-button>
 	</div>

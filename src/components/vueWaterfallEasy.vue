@@ -30,6 +30,9 @@
       .img-info {
         background: #fff;
         padding: .6em;
+        p.some-info {
+          color:#434343;
+        }
       }
     }
   }

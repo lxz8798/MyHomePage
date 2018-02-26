@@ -20,6 +20,7 @@ div#VueHtmlComp {
 		display:inline-flex;
 		flex-direction:column;
 		flex:1;
+		
 		div.Bread,div.AuthorInfo {
 			width:$WBox;
 			height:5vh;
@@ -48,8 +49,6 @@ div#VueHtmlComp {
 			font-style: normal;
 			font-weight: normal;
 			font-size: 1.4em;
-			height: 4vh;
-			line-height: 4vh;
 			margin-bottom:4vh;
 		}
 	}

@@ -1,0 +1,41 @@
+@import '../style/base/Base.scss';
+@import '../style/mixin/mixin.scss';
+$JsPage:2;
+div#JsComp {
+	width:$WBox;
+	height:$HBox * $JsPage;
+	min-height:$HBox;
+	@include FC(flex,column,center,center)
+	div.JsCompBox {
+		width:$WBox - $CompBoxSpace;
+		height:auto;
+		padding-top:$BoxPT;
+		display:inline-flex;
+		flex-direction:column;
+		flex:1;
+		div.Bread,div.AuthorInfo {
+			width:$WBox;
+			height:5vh;
+			line-height: 5vh;
+
+		}
+		div.Bread {
+			
+			
+		}
+		div.AuthorInfo {
+			i {
+				padding-right:5px;
+			}
+		}
+		div.JsTag {
+			width:$WBox;
+			height:10vh;
+			display:inline-flex;
+			align-items:center;
+			span {
+				margin-right:1vw;
+			}
+		}
+	}
+}

@@ -7,10 +7,13 @@
 					<el-menu-item :index="sub.componentName" v-for="sub in item.sub" :key="sub.id" v-text="sub.name"></el-menu-item>
 				</el-submenu>
 			  <el-menu-item index="nodejs">NODEJS</el-menu-item>
+        <el-menu-item index="mongodb">MONGODB</el-menu-item>
 			  <el-menu-item index="template">TEMPLATE</el-menu-item>
-			  <el-menu-item index="links">LINKS</el-menu-item>
-			  <el-menu-item index="blog">BLOG</el-menu-item>
-			  <el-menu-item index="update">UPDATE DATE-2017/12/20</el-menu-item>
+			   <el-menu-item index="links">LINKS</el-menu-item>
+			 <!-- <el-menu-item index="blog">BLOG</el-menu-item> -->
+			  <el-menu-item index="update">UPDATE</el-menu-item>
+        <!-- <el-menu-item index="signup">REGSITER</el-menu-item>
+        <el-menu-item index="login">LOGIN</el-menu-item> -->
 		  <router-view></router-view>
 		</el-menu>
     <span class="ShowNav"><i class="el-icon-sort"></i></span>

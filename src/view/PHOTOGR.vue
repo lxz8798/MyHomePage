@@ -46,16 +46,26 @@ export default {
 		return {
 			centerDialogVisible: false,
 			imgsArr: [
-				{ src: `./images/photogr/1.jpg`,link: '#', info: '一些图片描述文字' },
-				{ src: `./images/photogr/2.jpg`,link:'#',info: '1111111111' },
-				{ src: `./images/photogr/3.jpg`,link:'#',info: '22222222222222222' },
-				{ src: `./images/photogr/4.jpg`,link:'#',info: '333333333333333' },
-				{ src: `./images/photogr/5.jpg`,link:'#',info: '444444444444444444' },
-				{ src: `./images/photogr/6.jpg`,link:'#',info: '555555555555555555555555555555' },
-				{ src: `./images/photogr/7.jpg`,link:'#',info: '66666666666666' },
-				{ src: `./images/photogr/8.jpg`,link:'#',info: '77777777777777777777777' },
-				{ src: `./images/photogr/9.jpg`,link:'#',info: '88888888888888888888888888' },
-				{ src: `./images/photogr/10.jpg`,link:'#',info: '999999999999999999999' }
+				{ src: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1774593968,305449206&fm=200&gp=0.jpg',link:'#',info: '图片资源来自于互联网' },
+				{ src: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=546683621,3971380670&fm=27&gp=0.jpg',link:'#',info: '图片资源来自于互联网' },
+				{ src: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2394834204,2281852975&fm=27&gp=0.jpg',link:'#',info: '图片资源来自于互联网' },
+				{ src: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1370766075,3500160057&fm=200&gp=0.jpg',link:'#',info: '图片资源来自于互联网' },
+				{ src: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=803231833,996548669&fm=200&gp=0.jpg',link:'#',info: '图片资源来自于互联网' },
+				{ src: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3656522363,3541868681&fm=200&gp=0.jpg',link:'#',info: '图片资源来自于互联网' },
+				{ src: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3676894514,875050911&fm=200&gp=0.jpg',link:'#',info: '图片资源来自于互联网' },
+				{ src: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=368631557,1113342391&fm=200&gp=0.jpg',link:'#',info: '图片资源来自于互联网' },
+				{ src: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=642175484,1287611074&fm=200&gp=0.jpg',link:'#',info: '图片资源来自于互联网' },
+				{ src: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1843104863,1757523106&fm=200&gp=0.jpg',link:'#',info: '图片资源来自于互联网' },
+				{ src: './../../static/photogr/11.JPG',link:'#',info: '一些图片描述文字' },
+				{ src: './../../static/photogr/12.JPG',link:'#',info: '1111111111' },
+				{ src: './../../static/photogr/13.JPG',link:'#',info: '22222222222222222' },
+				{ src: './../../static/photogr/14.JPG',link:'#',info: '333333333333333' },
+				{ src: './../../static/photogr/15.JPG',link:'#',info: '444444444444444444' },
+				{ src: './../../static/photogr/16.JPG',link:'#',info: '55555555555' },
+				{ src: './../../static/photogr/17.JPG',link:'#',info: '66666666666666' },
+				{ src: './../../static/photogr/18.JPG',link:'#',info: '77777777777777777777777' },
+				{ src: './../../static/photogr/19.JPG',link:'#',info: '88888888888888888888888888' },
+				{ src: './../../static/photogr/20.JPG',link:'#',info: '999999999999999999999' }
 			], 				//存放所有已加载图片的数组（即当前页面会加载的所有图片）
 			fetchImgsArr: [], 			//存放每次滚动时下一批要加载的图片的数组
 			Tag:[
@@ -99,46 +109,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../style/base/Base.scss';
-@import '../style/mixin/mixin.scss';
-$NodeJSPage:3;
-div#PhotoComp {
-	width:$WBox;
-	height:$HBox * $NodeJSPage;
-	min-height:$HBox;
-	@include FC(flex,column,center,center)
-	div.PhotoCompBox {
-		width:$WBox - $CompBoxSpace;
-		height:$HBox * $NodeJSPage;
-		padding-top:$BoxPT;
-		display:inline-flex;
-		flex-direction:column;
-		flex:1;
-		div.Bread,div.AuthorInfo {
-			width:$WBox;
-			height:5vh;
-			line-height: 5vh;
-
-		}
-		div.Bread {
-			
-			
-		}
-		div.AuthorInfo {
-			i {
-				padding-right:5px;
-			}
-		}
-		div.NodeJSTag {
-			width:$WBox;
-			height:10vh;
-			display:inline-flex;
-			align-items:center;
-			span {
-				margin-right:1vw;
-			}
-		}
-	}
-}
+@import '../style/scss/Photo.scss';
 </style>
 

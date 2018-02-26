@@ -1,0 +1,40 @@
+@import '../style/base/Base.scss';
+@import '../style/mixin/mixin.scss';
+div#LinksComp {
+	width:$WBox;
+	height:$HBox * 2;
+	min-height:$HBox;
+	@include FC(flex,column,center,center);
+	div.LinksCompBox {
+		width:$WBox - $CompBoxSpace;
+		height:inherit;
+		padding-top:$BoxPT;
+		display:inline-flex;
+		flex-direction:column;
+		flex:1;
+		div.Bread,div.AuthorInfo {
+			width:$WBox;
+			height:5vh;
+			line-height: 5vh;
+
+		}
+		div.Bread {
+			
+			
+		}
+		div.AuthorInfo {
+			i {
+				padding-right:5px;
+			}
+		}
+		div.LinksTag {
+			width:$WBox;
+			height:10vh;
+			display:inline-flex;
+			align-items:center;
+			span {
+				margin-right:1vw;
+			}
+		}
+	}
+}

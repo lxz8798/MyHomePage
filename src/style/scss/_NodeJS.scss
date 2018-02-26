@@ -1,3 +1,5 @@
+@import '../style/base/Base.scss';
+@import '../style/mixin/mixin.scss';
 $NodeJSPage:3;
 div#NodeJSComp {
 	width:$WBox;

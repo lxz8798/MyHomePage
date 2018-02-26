@@ -242,8 +242,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../style/base/Base.scss';
-@import '../style/mixin/mixin.scss';
+
 @import '../style/scss/NodeJS.scss';
 
 </style>

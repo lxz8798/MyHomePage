@@ -272,7 +272,7 @@
     height: 40px;
     line-height: 1;
     outline: none;
-    padding: 0 15px;
+    padding: 0 30px;
     -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
     width: 100%; }

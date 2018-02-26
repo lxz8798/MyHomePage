@@ -2,7 +2,9 @@
 	<div id="ThreeDComp">
 		<header-nav></header-nav>
 		<div class="ThreeDCompBox">
-			
+			<box-two>
+				
+			</box-two>
 		</div>
 		<my-footer></my-footer>
 	</div>
@@ -11,10 +13,10 @@
 <script>
 import HeaderNav from '../components/MyHeaderNav.vue';
 import MyFooter from '../components/MyFooter.vue';
-
+import BoxTwo from '../components/BoxTwo.vue';
 
 export default {
-	components:{HeaderNav,MyFooter},
+	components:{HeaderNav,MyFooter,BoxTwo},
 	data () {
 		return {
 

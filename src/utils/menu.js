@@ -1,13 +1,10 @@
 module.exports = [	
 	{
 		name:'DESIGN',
-		id:'design',
+		id:'1',
 		componentName:'design',
 		sub:[
-			{
-				name:'PS',
-				componentName:'ps'
-			},
+			
 			{
 				name:'AI',
 				componentName:'ai'
@@ -21,6 +18,10 @@ module.exports = [
 				componentName:'photogr'
 			},
 			{
+				name:'PS',
+				componentName:'ps'
+			},
+			{
 				name:'CG',
 				componentName:'cg'
 			}
@@ -28,7 +29,7 @@ module.exports = [
 	},
 	{
 		name:'FE2',
-		id:'fe2',
+		id:'2',
 		componentName:'fe2',
 		sub:[
 			{
@@ -52,9 +53,13 @@ module.exports = [
 	},
 	{
 		name:'ANIMATION',
-		id:'animation',
+		id:'3',
 		componentName:'animation',
 		sub:[
+			{
+				name:'SVG',
+				componentName:'animesvg'
+			},
 			{
 				name:'CSS3',
 				componentName:'animecss3'
@@ -62,10 +67,6 @@ module.exports = [
 			{
 				name:'MG',
 				componentName:'animemg'
-			},
-			{
-				name:'SVG',
-				componentName:'animesvg'
 			},
 			{
 				name:'JS',
