@@ -167,19 +167,19 @@ const router = new Router({
       name: 'update',
       component: UpdateComp,
     },
-    // {
-    //   path: '/signup',
-    //   name: 'signup',
-    //   component: RegComp,
-    // },
-    // {
-    //   path: '/login',
-    //   name: 'login',
-    //   component: LoginComp,
-    //   meta:{
-    //     requireAuth: true
-    //   }
-    // },
+    {
+      path: '/signup',
+      name: 'signup',
+      component: RegComp,
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: LoginComp,
+      meta:{
+        requireAuth: true
+      }
+    },
     {
       path: "*",
       redirect: "/"

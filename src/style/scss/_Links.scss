@@ -1,17 +1,48 @@
 @import '../style/base/Base.scss';
 @import '../style/mixin/mixin.scss';
+$LinksPage:2;
 div#LinksComp {
 	width:$WBox;
-	height:$HBox * 2;
+	height:$HBox * $LinksPage;
 	min-height:$HBox;
 	@include FC(flex,column,center,center);
+	div.card {
+		
+		ul {
+			width:88vw;
+			height:35vh;
+			padding:0;
+			@include FC(flex,row,center,flex-start);
+			li {
+				padding:0.5vw;
+				width:20vw;
+				margin-right:1vw;
+				height:inherit;
+				background: #efefef;
+				.img {
+					width:inherit;
+					height:25vh;
+					border-bottom:1px solid #e2e2e2;
+					@include FC(flex,column,center,center);
+					img,a {
+						width:inherit;
+						height:25vh;
+					}
+					i {
+						font-size:30px;
+					}
+				}
+			}
+		}
+	}
 	div.LinksCompBox {
 		width:$WBox - $CompBoxSpace;
-		height:inherit;
+		height:auto;
 		padding-top:$BoxPT;
 		display:inline-flex;
 		flex-direction:column;
 		flex:1;
+		
 		div.Bread,div.AuthorInfo {
 			width:$WBox;
 			height:5vh;
@@ -38,3 +69,6 @@ div#LinksComp {
 		}
 	}
 }
+
+
+

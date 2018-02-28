@@ -1,9 +1,9 @@
 <template>
-	<div id="LoginComp">
-			<div class="LoginCompBox">
+	<div id="RegisterComp">
+			<div class="RegisterCompBox">
 				<el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" class="demo-ruleForm" :label-position="labelPosition" size="small">
 					
-					<div class="LoginIco">
+					<div class="RegisterIco">
 						<span><i class="iconfont icon-hipster"></i></span>
 					</div>
 
@@ -45,7 +45,7 @@ import HeaderNav from '../components/MyHeaderNav.vue';
 import MyFooter from '../components/MyFooter.vue';
 import ContentComp from '../components/ContentComp.vue';
 import BreadCrumb from '../components/BreadCrumb.vue';
-import Router from 'vue-router';
+
 export default {
 	components:{HeaderNav,MyFooter,ContentComp,BreadCrumb},
 		data () {
@@ -137,11 +137,10 @@ export default {
 	        				that.ruleForm.pass = "";
 	        				that.ruleForm.checkpass = "";
 	        				that.ruleForm.email = "";
-	        				next()
+	        				
 		          		}
 		          		if (that.userResData.status == 2) {
 	        				this.$message.error(that.userResData.message);
-	        				this.Router.push({path:'/login'});
 		          		}
 		          	})
 		          	.catch(error => {
@@ -159,52 +158,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../style/base/Base.scss';
-@import '../style/mixin/mixin.scss';
-// $LoginPage:3;
-div#LoginComp {
-	width:$WBox;
-	height:$HBox;
-	min-height:$HBox;
-	background: #202020;
-	@include FC(flex,column,center,center)
-	div.LoginCompBox {
-		width:26vw;
-		height:84vh;
-		display:inline-flex;
-		flex-direction:column;
-		align-items:center;
-		background:#fff;
-		border-radius:8px;
-		span.FormIco {
-			position: absolute;
-			top:2px;
-			left:0;
-			width:22px;
-			padding-left:8px;
-			z-index:1;
-			background: hsla(0,0,0,.05)
-		}
-		.el-form {
-			width:18vw;
-		}
-	}
-	div.LoginIco {
-		padding-top: 3vh;
-		padding-bottom: 3vh;
-		@include FC(flex,column,center,center);
-		.iconfont {
-			font-size: 9em;
-			color:#202020;
-			position: relative;
-			top:0;
-			left:0;
-		}
-	}
-	div.FormBut {
-		margin-top: 3em;
-	}
-}
+@import '../style/scss/Register.scss';
 
 </style>
 

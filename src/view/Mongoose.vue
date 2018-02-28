@@ -40,7 +40,12 @@ export default {
 	data () {
 		return {
 			code:`Mongoose有坑，要常填。。
-Mongoose本身是可以直接返回Promise的，只需要使用.exec()
+Mongoose本身是可以直接返回Promise的，只需要使用.exec()。
+
+状态: systemctl status mongod.serivce
+重启: systemctl restart mongod.service
+停止：systemctl stop mongod.service
+
 安装：
 npm install mongoose --save
 

@@ -8,7 +8,7 @@
 				</el-submenu>
 			  <el-menu-item index="nodejs">NODEJS</el-menu-item>
         <el-menu-item index="mongodb">MONGODB</el-menu-item>
-			  <el-menu-item index="template">TEMPLATE</el-menu-item>
+			  <!-- <el-menu-item index="template">TEMPLATE</el-menu-item> -->
 			   <el-menu-item index="links">LINKS</el-menu-item>
 			 <!-- <el-menu-item index="blog">BLOG</el-menu-item> -->
 			  <el-menu-item index="update">UPDATE</el-menu-item>
@@ -32,7 +32,7 @@ export default {
     	scrollR:'',
     	HiddenTop:false,
     	NHidden:'NavHidden',
-      	activeIndex: '1'
+    	activeIndex: '1'
     }
   },
   mounted () {

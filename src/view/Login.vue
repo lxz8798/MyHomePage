@@ -133,7 +133,7 @@ export default {
 <style lang="scss" scoped>
 @import '../style/base/Base.scss';
 @import '../style/mixin/mixin.scss';
-@import '../style/scss/Regsiter.scss';
+// @import '../style/scss/Regsiter.scss';
 
 
 </style>

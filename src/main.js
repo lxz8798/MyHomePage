@@ -6,12 +6,13 @@ import {deleteRequest} from './api/httpAxios.js';
 import {putRequest} from './api/httpAxios.js';
 // import apiSetting from './api/apiSetting.js';
 // import * as mockData from '../mock/index.js'
+import Router from 'vue-router';
 import router from './router/index.js';
 import $ from 'jquery';
 import store from './vuex/store.js';
 import ElementUI from 'element-ui';
 import qs from 'qs';
-import '../theme/index.css';
+import '../src/assets/css/theme/index.css';
 import 'mavon-editor/dist/css/index.css';
 import VueCodemirror from 'vue-codemirror';
 import 'codemirror/lib/codemirror.css';
@@ -29,6 +30,7 @@ Vue.prototype.getRequest = getRequest;
 Vue.prototype.postRequest = postRequest;
 Vue.prototype.deleteRequest = deleteRequest;
 Vue.prototype.putRequest = putRequest;
+Vue.prototype.Router = Router;
 
 Vue.config.productionTip = false;
 
@@ -38,6 +40,7 @@ Vue.filter('getYMD',(input) => {
 
 new Vue({
   el: '#app',
+  Router,
   router,
   store,
   template: '<HomePage/>',

@@ -56,16 +56,16 @@ export default {
 				{ src: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=368631557,1113342391&fm=200&gp=0.jpg',link:'#',info: '图片资源来自于互联网' },
 				{ src: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=642175484,1287611074&fm=200&gp=0.jpg',link:'#',info: '图片资源来自于互联网' },
 				{ src: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1843104863,1757523106&fm=200&gp=0.jpg',link:'#',info: '图片资源来自于互联网' },
-				{ src: './../../static/photogr/11.JPG',link:'#',info: '一些图片描述文字' },
-				{ src: './../../static/photogr/12.JPG',link:'#',info: '1111111111' },
-				{ src: './../../static/photogr/13.JPG',link:'#',info: '22222222222222222' },
-				{ src: './../../static/photogr/14.JPG',link:'#',info: '333333333333333' },
-				{ src: './../../static/photogr/15.JPG',link:'#',info: '444444444444444444' },
-				{ src: './../../static/photogr/16.JPG',link:'#',info: '55555555555' },
-				{ src: './../../static/photogr/17.JPG',link:'#',info: '66666666666666' },
-				{ src: './../../static/photogr/18.JPG',link:'#',info: '77777777777777777777777' },
-				{ src: './../../static/photogr/19.JPG',link:'#',info: '88888888888888888888888888' },
-				{ src: './../../static/photogr/20.JPG',link:'#',info: '999999999999999999999' }
+				// { src: require('../assets/photogr/11.jpg'),link:'#',info: '一些图片描述文字' },
+				// { src: require('../assets/photogr/12.jpg'),link:'#',info: '1111111111' },
+				// { src: require('../assets/photogr/13.jpg'),link:'#',info: '22222222222222222' },
+				// { src: require('../assets/photogr/14.jpg'),link:'#',info: '333333333333333' },
+				// { src: require('../assets/photogr/15.jpg'),link:'#',info: '444444444444444444' },
+				// { src: require('../assets/photogr/16.jpg'),link:'#',info: '55555555555' },
+				// { src: require('../assets/photogr/17.jpg'),link:'#',info: '66666666666666' },
+				// { src: require('../assets/photogr/18.jpg'),link:'#',info: '77777777777777777777777' },
+				// { src: require('../assets/photogr/19.jpg'),link:'#',info: '88888888888888888888888888' },
+				// { src: require('../assets/photogr/20.jpg'),link:'#',info: '999999999999999999999' }
 			], 				//存放所有已加载图片的数组（即当前页面会加载的所有图片）
 			fetchImgsArr: [], 			//存放每次滚动时下一批要加载的图片的数组
 			Tag:[
