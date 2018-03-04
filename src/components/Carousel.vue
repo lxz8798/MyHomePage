@@ -47,11 +47,27 @@ export default {
 	          	img:require('../assets/img/ps1.jpg')
 	        },
 	        {
-    			BigTitle:'整站使用了以下技术栈222',
+    			BigTitle:'设计是门高深的学问,需要一辈子专研。',
+    			BigDes1:'良好的用户体验可以决定客户的去留，理念适应于各种设计之上，PS/FW可以制作页面效果。',
+	        	BigDes2:'网络上有很多可以提供设计思路的地方。',
+	        	BigDes3:'输写代码以前使用DW，现在使用Sublime，更方便轻巧。',
+	        	BigDes4:'如果能在设计元素里加入更全面的思考，那么设计出来的东西就更让容易让人接受，',
+	        	BigDes5:'因此，在设计之初就要考虑到后期优化方面的点滴细节。',
+	        	BigDes6:'代码输出和压缩能加快浏览速度，更有利于体验',
+	        	BigDes7:'......',
+	        	BigDes8:'...',
 	          	img:require('../assets/img/ps2.jpg')
 	        },
 	        {
-        		BigTitle:'整站使用了以下技术栈333',
+        		BigTitle:'技术是门脑力活,锻炼大脑有没有!',
+    			BigDes1:'不需要太过专精，只需要简单点就可以在3维空间构思设计风格。',
+	        	BigDes2:'如果有空闲时间，后期可以深入研究一下3D方面的内容。',
+	        	BigDes3:'页面动效方面，以前是Flash，但是Flash渐渐退出以后，在页效方面其实有了更多选择。',
+	        	BigDes4:'JS原生的Canvas写的动画不亚于Flash，还有GSAP推出的TweenLite、TweenMax更是流畅的写出页面动效。',
+	        	BigDes5:'本点点就使用了TweenLite、TweenMax。',
+	        	BigDes6:'一些细节方面的动效点缀能进到画龙点睛的效果。',
+	        	BigDes7:'......',
+	        	BigDes8:'...',
 	          	img:require('../assets/img/ps3.jpg')
 	        }
 	      ]

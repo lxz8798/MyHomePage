@@ -19,7 +19,7 @@
 					LAZY-STUDIO.COM
 				</li>
 				<li class="t4">
-					v1.4.0
+					v1.4.1
 				</li>
 			</ul>
 		</div>

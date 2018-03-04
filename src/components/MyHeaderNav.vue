@@ -12,8 +12,8 @@
 			   <el-menu-item index="links">LINKS</el-menu-item>
 			 <!-- <el-menu-item index="blog">BLOG</el-menu-item> -->
 			  <el-menu-item index="update">UPDATE</el-menu-item>
-        <!-- <el-menu-item index="signup">REGSITER</el-menu-item>
-        <el-menu-item index="login">LOGIN</el-menu-item> -->
+        <el-menu-item index="signup">Sing Up</el-menu-item>
+        <el-menu-item index="signin">Sing In</el-menu-item>
 		  <router-view></router-view>
 		</el-menu>
     <span class="ShowNav"><i class="el-icon-sort"></i></span>

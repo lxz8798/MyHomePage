@@ -173,8 +173,8 @@ const router = new Router({
       component: RegComp,
     },
     {
-      path: '/login',
-      name: 'login',
+      path: '/signin',
+      name: 'signin',
       component: LoginComp,
       meta:{
         requireAuth: true
@@ -187,19 +187,19 @@ const router = new Router({
   ]
 });
 
-router.beforeEach((to, from, next) => {
-  if (to.meta.requireAuth) { //判断是否需要登录权限
-    if (this.$store.state.token) { //判断是否需要登录
-      next()
-    } else {
-      next({
-        path:'/login',
-        query:{redirect: to.fullPath}
-      })
-    }
-  } else {
-    next()
-  }
-})
+// router.beforeEach((to, from, next) => {
+//   if (to.meta.requireAuth) { //判断是否需要登录权限
+//     if (this.$store.state.token) { //判断是否需要登录
+//       next()
+//     } else {
+//       next({
+//         path:'/login',
+//         query:{redirect: to.fullPath}
+//       })
+//     }
+//   } else {
+//     next()
+//   }
+// })
 
 export default router

@@ -17,9 +17,9 @@
 					    <el-input v-model="ruleForm.username"></el-input>
 				  	</el-form-item>
 
-					<el-form-item label="PASSWORD" prop="password">
+					<el-form-item label="PASSWORD" prop="pass">
 						<span class="FormIco"><i class="iconfont icon-zhucedenglumima1"></i></span>
-				    	<el-input type="password" v-model="ruleForm.password" auto-complete="off"></el-input>
+				    	<el-input type="password" v-model="ruleForm.pass" auto-complete="off"></el-input>
 				    </el-form-item>
 
 					<el-form-item label="CONFIRM" prop="checkpass">
@@ -45,6 +45,7 @@ import HeaderNav from '../components/MyHeaderNav.vue';
 import MyFooter from '../components/MyFooter.vue';
 import ContentComp from '../components/ContentComp.vue';
 import BreadCrumb from '../components/BreadCrumb.vue';
+
 export default {
 	components:{HeaderNav,MyFooter,ContentComp,BreadCrumb},
 		data () {
@@ -69,7 +70,7 @@ export default {
       	var validatePass2 = (rule, value, callback) => {
 	        if (value === '') {
 	          callback(new Error('请再次输入密码'));
-	        } else if (value !== this.ruleForm.password) {
+	        } else if (value !== this.ruleForm.pass) {
 	          callback(new Error('两次输入密码不一致!'));
 	        } else {
 	          callback();
@@ -83,11 +84,11 @@ export default {
       		}
       	}
 		return {
-			
 			labelPosition:'top',
+			userResData:'',
 			ruleForm: {
 				username:'',
-	            password: '',
+	            pass: '',
 	            checkpass: '',
 	            email:''
 	        },
@@ -96,7 +97,7 @@ export default {
 		            {validator:checkUser, trigger: 'blur' },
 		            // { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
 	          	],
-	            password: [
+	            pass: [
 	                {validator: validatePass, trigger: 'blur' }
 	            ],
 	            checkpass: [
@@ -114,39 +115,40 @@ export default {
 		
 	},
  	methods: {
-      	async regsition(ruleForm) {
-      		
-      		await this.$refs.ruleForm.validate(valid => {
+      	regsition(ruleForm) {
+      		this.$refs.ruleForm.validate(valid => {
 		          if (valid) {
 		          	let that = this;
 		          	let params = {
 		          		username:this.ruleForm.username,
-		          		password:this.ruleForm.password,
+		          		password:this.ruleForm.pass,
 		          		checkpass:this.ruleForm.checkpass,
 		          		email:this.ruleForm.email
 		          	}
-		          	this.postRequest('/signup',params,res => {
-		          		return new Promise((resolve,reject) => {
-		          			if (res.status == 200) {
-			          			resolve()
-			          		} else {
-			          			reject()
-			          		}
-		          		})
+		          	this.postRequest('/signup',params,(response, next) => {
+		          		// console.log(response)
 		          	})
-		          	.then(data => {
-		          		let userResData = data.data;
-		          		let that = this;
-		          		if (userResData.status == 0) {
-		          			this.$message.success(userResData.message);
-		          			that.$router.push('/signin');
+		          	.then(response => {
+		          		console.log(response)
+		          		that.userResData = response.data;
+		          		if (that.userResData.status == 1) {
+	        				this.$message.success(that.userResData.message);
+	        				that.ruleForm.username = "";
+	        				that.ruleForm.pass = "";
+	        				that.ruleForm.checkpass = "";
+	        				that.ruleForm.email = "";
+	        				
 		          		}
-		          		if (userResData.status == 1) {
-		          			this.$message.error(userResData.message);
+		          		if (that.userResData.status == 2) {
+	        				this.$message.error(that.userResData.message);
 		          		}
+		          	})
+		          	.catch(error => {
+		          		this.$message.error(that.userResData.message)
 		          	})
 		          } else {
 		            	this.$message.error('表单值不能为空');
+		            	next()
 		          }
         	});
       		

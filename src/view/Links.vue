@@ -11,7 +11,7 @@
 			<div class="card">
 				<ul>
 					<li>
-						<div class="img"><a href="../site/old/"><img src="../assets/site/old.png" height="699" width="1347" /></a></div>
+						<div class="img"><a href="../site/old/" target="_blank"><img src="../assets/site/old.png" height="699" width="1347" /></a></div>
 						<div class="info">
 							<h4>很早以前的旧版本主页</h4>
 							<p>完成时间:2013-7-13</p>

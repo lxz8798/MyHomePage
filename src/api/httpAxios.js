@@ -4,6 +4,7 @@ import {Message} from 'element-ui'
 //这个封装来自于https://segmentfault.com/a/1190000012804684
 
 axios.interceptors.request.use(config=> {
+  const token = getCookie('session'); //获取Cookie
   return config;
 }, err=> {
   Message.error({message: '请求超时!'});
@@ -28,7 +29,7 @@ axios.interceptors.response.use(data=> {
 
 let base = 'http://localhost:3000';
 
-export const postRequest = (url, params,callback) => {
+export const postRequest = (url, params) => {
   return axios({
     method: 'post',
     url: `${base}${url}`,
@@ -78,9 +79,10 @@ export const deleteRequest = (url) => {
     url: `${base}${url}`
   });
 }
-export const getRequest = (url) => {
+export const getRequest = (url, params) => {
   return axios({
     method: 'get',
-    url: `${base}${url}`
+    url: `${base}${url}`,
+    params: params
   });
 }
